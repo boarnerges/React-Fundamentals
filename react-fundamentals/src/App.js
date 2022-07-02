@@ -3,7 +3,9 @@ import './App.css';
 import { useState } from 'react';
 
 function App() {
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(function generateRandomInteger() {
+    return Math.floor(Math.random() * 100);
+  });
   return (
     <div className="App">
       <h5>USESTATE COUNTER</h5>
